@@ -22,11 +22,18 @@
                     <DataTemplate x:DataType="models:OnboardingModel">
                         <Grid RowDefinitions="1.5*, 1*">
 
+                            <Image Source="{Binding Image}"/>
                             <StackLayout Grid.Row="1" >
                                 <Label   Text="{Binding Title}"
-                                         FontFamily="Light"
+                                         HorizontalOptions="Start"
+                                         LineHeight=".9"
+                                         FontFamily="Bold"
                                          Style="{StaticResource OnboardingHeader}"/>
+                                         
                                 <Label   Text="{Binding Content}"
+                                         FontSize="18"
+                                         MaxLines="5"
+                                         FontFamily="Regular"
                                          Style="{StaticResource OnboardingContent}"
                                          TextColor="{StaticResource BodyText}"/>
                             </StackLayout>

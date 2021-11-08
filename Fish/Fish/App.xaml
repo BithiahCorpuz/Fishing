@@ -19,7 +19,8 @@
         </Style>
 
         <Style x:Key="OnboardingContent" TargetType="Label">
-            <Setter Property="TextColor" Value="#696977"/>
+            <Setter Property="TextColor" Value="{StaticResource BodyText}"/>
+            <Setter Property="FontFamily" Value="Bold"/>
             <Setter Property="Margin" Value="20,0"/>
             <Setter Property="FontSize" Value="20"/>
         </Style>
