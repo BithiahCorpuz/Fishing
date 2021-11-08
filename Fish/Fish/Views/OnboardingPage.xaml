@@ -20,7 +20,8 @@
 
                 <CarouselView.ItemTemplate>
                     <DataTemplate x:DataType="models:OnboardingModel">
-                        <Grid RowDefinitions="1.5*, 1*">
+                        <Grid RowDefinitions="1.5*, 1*"
+                              RowSpacing="0">
 
                             <Image Source="{Binding Image}"/>
                             <StackLayout Grid.Row="1" >
