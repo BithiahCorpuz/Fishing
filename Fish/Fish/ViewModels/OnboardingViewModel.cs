@@ -25,7 +25,7 @@ namespace Fish.ViewModels
                     Content ="Bigmouth buffalo, North American darter mahi-mahi bigeye squaretail surfperch silver dollar." +
                     " Daggertooth pike conger paddlefish gouramie pearl danio mummichog waryfish grass carp, " +
                     "common carp striped bass Black swallower graveldiver sabertooth.",
-                    Image =""
+                    Image ="OnboardingImage1"
                 },
 
                 new OnboardingModel
@@ -34,7 +34,7 @@ namespace Fish.ViewModels
                     Content ="Bull shark escolar pomfret arapaima daggertooth pike conger sand stargazer," +
                     " California smoothtongue. Pickerel beluga sturgeon horsefish, Peter's" +
                     " elephantnose fish threadtail barfish Rattail fierasfer desert pupfish.",
-                    Image =""
+                    Image ="OnboardingImage2"
                 },
 
 
@@ -44,7 +44,7 @@ namespace Fish.ViewModels
                     Content ="Bigmouth buffalo, North American darter mahi-mahi bigeye squaretail surfperch silver dollar. " +
                     "Daggertooth pike conger paddlefish gouramie pearl danio mummichog waryfish grass carp," +
                     " common carp striped bass Black swallower graveldiver sabertooth.",
-                    Image =""
+                    Image ="OnboardingImage3"
                 },
 
 
