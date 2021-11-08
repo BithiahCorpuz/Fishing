@@ -18,6 +18,7 @@
 
             <CarouselView Grid.Row="0"
                           Grid.RowSpan="2"
+                          IndicatorView="indicatorV"
                           ItemsSource="{Binding Items}">
                 <CarouselView.ItemTemplate>
                     <DataTemplate x:DataType="models:OnboardingModel">
@@ -47,7 +48,7 @@
 
             </CarouselView>
 
-            <magic:GradientGLView>
+            <magic:GradientView Margin="0,0,0,-1">
                 <magic:GradientCollection>
                     <magic:RadialGradient x:Name="Radials"
                                           Center=".3,0"
@@ -60,7 +61,7 @@
                                             Offset="1" />
                     </magic:RadialGradient>
                 </magic:GradientCollection>
-            </magic:GradientGLView>
+            </magic:GradientView>
 
 
             <!--<BoxView Grid.Row="1" Color="{StaticResource bg}"/>-->
@@ -71,15 +72,39 @@
 
             </StackLayout>
 
-            <Button
+
+            <Grid VerticalOptions="End" 
+                  Margin="20"
+                  ColumnDefinitions="*,*"
+                  HeightRequest="50"
+                  Grid.Row="1">
+
+                <IndicatorView x:Name="indicatorV"
+                               HorizontalOptions="Start"
+                               IndicatorColor="LightBlue"
+                               SelectedIndicatorColor="DarkGreen">
+                    <IndicatorView.IndicatorTemplate>
+                        <DataTemplate>
+                        <Image Source="Selected"/>
+                        </DataTemplate>
+                    </IndicatorView.IndicatorTemplate>
+                </IndicatorView>
+
+
+            </Grid>
+        
+            <Button 
                 Grid.Row="1"
                 Text="Hi" 
                 VerticalOptions="End"
                 Clicked="Button_Clicked" />
+
+
             <BoxView 
                      x:Name="FadeBox" 
                      InputTransparent="True"
                      Opacity="0"
+                     Grid.RowSpan="2"
                      Color="Black"/>
         </Grid>
 
