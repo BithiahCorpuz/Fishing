@@ -30,7 +30,7 @@
                                          Style="{StaticResource OnboardingContent}"
                                          TextColor="{StaticResource BodyText}"/>
                                 
-                                sdasaa
+                            
                             </StackLayout>
 
                         </Grid>
