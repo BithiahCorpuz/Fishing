@@ -24,13 +24,11 @@
 
                             <StackLayout Grid.Row="1" >
                                 <Label   Text="{Binding Title}"
-                                         FontFamily="Bold"
+                                         FontFamily="Light"
                                          Style="{StaticResource OnboardingHeader}"/>
                                 <Label   Text="{Binding Content}"
                                          Style="{StaticResource OnboardingContent}"
-                                         TextColor="{StaticResource Accent}"/>
-                                
-                            
+                                         TextColor="{StaticResource BodyText}"/>
                             </StackLayout>
 
                         </Grid>
