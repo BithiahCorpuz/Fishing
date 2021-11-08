@@ -39,7 +39,7 @@ namespace Fish.ViewModels
 
 
                 new OnboardingModel
-                {
+                { 
                     Title = "Fishing near me",
                     Content ="Bigmouth buffalo, North American darter mahi-mahi bigeye squaretail surfperch silver dollar. " +
                     "Daggertooth pike conger paddlefish gouramie pearl danio mummichog waryfish grass carp," +

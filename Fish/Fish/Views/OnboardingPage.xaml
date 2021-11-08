@@ -11,19 +11,21 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid  BackgroundColor="{StaticResource bg}"
+               Margin="0"
+               RowSpacing="0"
                RowDefinitions="1.5*, 1*">
             <BoxView Color="Yellow"/>
 
             <CarouselView Grid.Row="0"
                           Grid.RowSpan="2"
                           ItemsSource="{Binding Items}">
-
                 <CarouselView.ItemTemplate>
                     <DataTemplate x:DataType="models:OnboardingModel">
                         <Grid RowDefinitions="1.5*, 1*"
                               RowSpacing="0">
 
-                            <Image Source="{Binding Image}"/>
+                            <Image Source="{Binding Image}"
+                                   Aspect="AspectFill"/>
                             <StackLayout Grid.Row="1" >
                                 <Label   Text="{Binding Title}"
                                          HorizontalOptions="Start"
