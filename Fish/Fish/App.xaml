@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fish.App">
+    <Application.Resources>
+
+        
+        <!-- Colors -->
+        <Color x:Key="Accent">#9EE788</Color>
+        <Color x:Key="BackgroundGradientS">#696977</Color>
+        <Color x:Key="BodyText">#93939F</Color>
+        <Color x:Key="bg">black</Color>
+
+        <!-- Styles -->
+        <Style x:Key="OnboardingHeader" TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="FontSize" Value="32"/>
+        </Style>
+
+        <Style x:Key="OnboardingContent" TargetType="Label">
+            <Setter Property="TextColor" Value="#696977"/>
+            <Setter Property="Margin" Value="20,0"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+    </Application.Resources>
+</Application>
