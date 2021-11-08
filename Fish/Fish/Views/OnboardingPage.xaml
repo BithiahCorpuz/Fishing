@@ -29,6 +29,8 @@
                                 <Label   Text="{Binding Content}"
                                          Style="{StaticResource OnboardingContent}"
                                          TextColor="{StaticResource BodyText}"/>
+                                
+                                sdasaa
                             </StackLayout>
 
                         </Grid>
