@@ -25,7 +25,7 @@ namespace Fish.ViewModels
                     Content ="Bigmouth buffalo, North American darter mahi-mahi bigeye squaretail surfperch silver dollar." +
                     " Daggertooth pike conger paddlefish gouramie pearl danio mummichog waryfish grass carp, " +
                     "common carp striped bass Black swallower graveldiver sabertooth.",
-                    Image ="OnboardingImage1"
+                    Image ="OnboardingImage1.png"
                 },
 
                 new OnboardingModel
