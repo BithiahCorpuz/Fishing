@@ -16679,7 +16679,7 @@ namespace Fish.Droid
 			public const int tooltip_frame_light = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int Unselect = 2131165333;
+			public const int UnSelected = 2131165333;
 			
 			static Drawable()
 			{
