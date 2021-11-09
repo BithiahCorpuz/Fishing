@@ -108,7 +108,7 @@
 
 
             <Grid VerticalOptions="End" 
-                  Margin="40"
+                  Margin="40" 
                   ColumnDefinitions="*,*"
                   HeightRequest="60"
                   Grid.Row="1">
@@ -125,30 +125,25 @@
                     </IndicatorView.IndicatorTemplate>
                 </IndicatorView>
 
-                <Frame Grid.Column="1" 
-                       CornerRadius="16" 
-                       >
-                    <Frame.Background>
-                        <LinearGradientBrush>
-                            <GradientStop Color="{StaticResource BackgroundGradientS}"/>
-                            <GradientStop Color="{StaticResource bg}"/>
-                        </LinearGradientBrush>
-                    </Frame.Background>
-                    <Grid ColumnDefinitions="*,50">
+                <Grid ColumnDefinitions="*,50" Grid.Column="1">
                         
                         <Label Grid.Column="0" 
                                Text="Explore"
+                               Margin="70,0,0,0"
                                Style="{StaticResource SubHeader}"
                                VerticalOptions="Center"
-                               FontSize="12"
-                            
                              />
-                        <ImageButton Source="Arrow" WidthRequest="150" Grid.Column="1" 
-                                     HeightRequest="50" BackgroundColor="{StaticResource Accent}"
-                                     CornerRadius="16" HorizontalOptions="End" VerticalOptions="Center"
+                        <ImageButton Source="Arrow" Padding="14"
+                                     WidthRequest="50"
+                                     Grid.Column="1" 
+                                     HeightRequest="50"
+                                     BackgroundColor="Transparent"
+                                     CornerRadius="16"
+                                     HorizontalOptions="Start" 
+                                     Clicked="ImageButton_Clicked"
                                      />
                     </Grid>
-                </Frame>
+                
   
             </Grid>
         

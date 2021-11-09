@@ -1,33 +1,91 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Fish.MainPage">
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="Fish.MainPage"
+             BackgroundColor="{StaticResource bg}">
 
-    <Grid>
-      
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
-        
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <ControlTemplate
+		        x:Key="TabItemTemplate">
+                <Grid
+			        RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image
+				        Grid.Row="0"
+				        VerticalOptions="Center"
+				        HorizontalOptions="Center"
+				        WidthRequest="24"
+				        HeightRequest="24"
+                        Margin="6"
+				        Source="{TemplateBinding CurrentIcon}" />
+                    <Label
+				        Grid.Row="1"
+				        HorizontalOptions="Center"
+				        FontSize="{TemplateBinding FontSize}"
+				        Text="{TemplateBinding Text}"
+				        TextColor="{TemplateBinding CurrentTextColor}" />
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <Grid RowDefinitions="*,60">
+
+        <xct:TabView Grid.Row="1">
+          
+            <xct:TabViewItem
+                      
+                  Icon="Tab1.png"
+                    ControlTemplate="{StaticResource TabItemTemplate}"
+                    >
+                <Grid 
+                    
+                      >
+                    <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent1" />
+                </Grid>
+            </xct:TabViewItem>
+            
+            <xct:TabViewItem
+                    Text="Tab 2"   
+                    Icon="circle.png"
+                    
+                     />
+            <xct:TabViewItem
+                    Text="Tab 3"  
+                    Icon="square.png"
+                    ControlTemplate="{StaticResource TabItemTemplate}"
+                    >
+                <Grid
+                        BackgroundColor="LightCoral">
+                    <Label    
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent3" />
+                </Grid>
+            </xct:TabViewItem>
+        </xct:TabView>
+
+
+
+
+
         <BoxView 
                      x:Name="FadeBox" 
                      InputTransparent="True"
+                     Grid.Row="1"
                      Opacity="1"
-                     Color="Black"/>
+                     Color="White"/>
+      
     </Grid>
-</ContentPage>
+</ContentPage>                                     

@@ -29,7 +29,8 @@
         <Style x:Key="SubHeader" TargetType="Label">
             <Setter Property="TextColor" Value="White"/>
             <Setter Property="FontFamily" Value="Bold"/>
-          
+            <Setter Property="FontSize" Value="12"/>
+
         </Style>
 
     </Application.Resources>
