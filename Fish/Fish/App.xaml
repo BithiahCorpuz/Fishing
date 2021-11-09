@@ -25,5 +25,12 @@
             <Setter Property="FontSize" Value="20"/>
         </Style>
 
+
+        <Style x:Key="SubHeader" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontFamily" Value="Bold"/>
+          
+        </Style>
+
     </Application.Resources>
 </Application>

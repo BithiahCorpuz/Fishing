@@ -9,6 +9,40 @@
     <ContentPage.BindingContext>
         <ViewModels1:OnboardingViewModel/>
     </ContentPage.BindingContext>
+
+
+    <ContentPage.Resources>
+ 
+        <Style x:Key="IndicatorStyle"
+               TargetType="Image">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Source"
+                                        Value="Unselected" />
+                                <Setter Property="Margin"
+                                        Value="0,0"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="Source"
+                                        Value="Selected" />
+                                <Setter Property="Margin"
+                                        Value="10,0"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+
+
+
     <ContentPage.Content>
         <Grid  BackgroundColor="{StaticResource bg}"
                Margin="0"
@@ -76,7 +110,7 @@
             <Grid VerticalOptions="End" 
                   Margin="40"
                   ColumnDefinitions="*,*"
-                  HeightRequest="50"
+                  HeightRequest="60"
                   Grid.Row="1">
 
                 <IndicatorView x:Name="indicatorV"
@@ -85,19 +119,44 @@
                                SelectedIndicatorColor="Transparent">
                     <IndicatorView.IndicatorTemplate>
                         <DataTemplate>
-                        <Image Source="Selected"/>
+                        <Image Source="UnSelected"
+                               
+                               Style="{StaticResource IndicatorStyle}"/>
                         </DataTemplate>
                     </IndicatorView.IndicatorTemplate>
                 </IndicatorView>
 
-
+                <Frame Grid.Column="1" 
+                       CornerRadius="16" 
+                       Margin="20,0" >
+                    <Frame.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="{StaticResource BackgroundGradientS}"/>
+                            <GradientStop Color="{StaticResource bg}"/>
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <Grid ColumnDefinitions="*,50"  >
+                        <Label Grid.Column="0" 
+                               Text="Explore"
+                               Style="{StaticResource SubHeader}"
+                               VerticalOptions="Center"
+                               FontSize="12"
+                            
+                             />
+                        <ImageButton Source="Arrow" WidthRequest="50" Grid.Column="1" Padding="14"
+                                     HeightRequest="50" BackgroundColor="{StaticResource Accent}"
+                                     CornerRadius="16" HorizontalOptions="End" VerticalOptions="Center"
+                                     />
+                    </Grid>
+                </Frame>
+  
             </Grid>
         
-            <Button  
+            <!--<Button  
                 Grid.Row="1"
                 Text="Hi" 
                 VerticalOptions="End"
-                Clicked="Button_Clicked" />
+                Clicked="Button_Clicked" />-->
 
 
             <BoxView 
